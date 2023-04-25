@@ -1,0 +1,5 @@
+le code HTML crée une div conteneur pour le slide et trois divs pour chaque image. Les classes CSS sont utilisées pour masquer les images sauf la première. Les boutons "prev" et "next" permettent de naviguer entre les images.
+
+Le code CSS définit la mise en forme du slide, notamment la position des boutons et le style de survol. La classe "active" est utilisée dans le JavaScript pour afficher la diapositive en cours.
+
+Le code JavaScript définit les fonctions pour changer les diapositives et afficher la diapositive en cours. La variable "slideIndex" est utilisée pour stocker l'index de la diapositive actuelle.

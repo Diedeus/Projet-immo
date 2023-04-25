@@ -1,0 +1,462 @@
+@font-face {
+  /*permet de donner un numéro a une police dans le fichier asset */
+  font-family: "font-1";
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-family: "font-2";
+  src: url(../fonts/EmilyAustin.ttf);
+}
+
+* {
+  font-family: "font-1";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4e4;
+}
+
+.dark-mode {
+  background-color: #020c18;
+  color: #f4f4e4;
+}
+
+.dark-mode nav button {
+  background: linear-gradient(90deg, #020c18, #7b8fa8);
+}
+
+nav button {
+  height: 45px;
+  width: 102px;
+  border-radius: 30px;
+  border: #ab911d 2px solid;
+  background: linear-gradient(90deg, #7b8fa8, #020c18);
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+nav button img {
+  width: 100px;
+  height: 80px;
+  margin-top: -21px;
+  margin-left: -8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.entete {
+  background: linear-gradient(45deg, #020c18, #020c18, #7b8fa8, #020c18);
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border-bottom: 7px solid #ab911d;
+  position: relative;
+}
+
+.logo a img {
+  width: 100%;
+  height: 143px;
+}
+
+.titre_entete {
+  background: -webkit-linear-gradient(top, #2a86dc, #fcfdfd);
+  /* Dégradé linéaire de gauche à droite */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Applique le dégradé de couleurs au texte */
+  margin: auto
+}
+
+.titre_entete h1 {
+  font-size: 4em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #ab911d;
+}
+
+.titre_entete h2 {
+  font-size: 2em;
+  margin: auto;
+}
+
+.maisondroit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 3px solid #ab911d;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.maisongauche {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  border-bottom: 3px solid #ab911d;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.slideshow-container {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.slideshow-slide {
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  width: auto;
+  padding: 16px;
+  color: #f4f4e4;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  display: block;
+}
+
+.textphoto {
+  color: #f4f4e4;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+}
+
+.numerophoto {
+  color: #f4f4e4;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.textdroit h2,
+.textgauche h2 {
+  font-size: 40px;
+}
+
+.textdroit h3,
+.textgauche h3 {
+  font-size: 35px;
+}
+
+.textdroit p,
+.textgauche p {
+  font-size: 20px;
+}
+
+#logopres {
+  width: 25px;
+  height: 25px;
+}
+
+#textcontact {
+  font-size: 20px;
+}
+
+#retour {
+  background-color: #020c1800;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #020c18, #020c18, #7b8fa8, #020c18);
+  border-top: 5px solid #ab911d;
+  margin-top: -3px;
+  /*pour supperposer les bordures du dernier éléments body et footer */
+  color: #ab911d;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.informations p {
+  text-decoration: underline;
+}
+
+#image-container {
+  display: none;
+}
+
+.mention {
+  margin: 50px 100px;
+  font-size: 1.2rem;
+  font-family: font1;
+}
+
+footer a {
+  color: #ab911d;
+}
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 0;
+    background-color: #f4f4e4;
+  }
+
+  nav button {
+    height: 45px;
+    width: 102px;
+    border-radius: 30px;
+    border: #ab911d 2px solid;
+    background-color: #7b8fa8;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  nav button img {
+    width: 100px;
+    height: 80px;
+    margin-top: -21px;
+    margin-left: -8px;
+  }
+
+  .entete {
+    width: 100%;
+    height: 100px;
+    border-bottom: 4px solid #ab911d;
+  }
+
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 45px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+  .maisondroit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 3px solid #ab911d;
+    align-items: center;
+  }
+
+  .maisongauche {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 3px solid #ab911d;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .slideshow-container img {
+    width: 100%;
+
+  }
+
+  .slideshow-slide {
+    display: none;
+  }
+
+  .prev,
+  .next {
+    color: #f4f4e4;
+    position: absolute;
+    top: 45%;
+    margin-top: -22px;
+    width: auto;
+    padding: 0px;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .textphoto {
+    color: #020c1800;
+  }
+
+  .numerophoto {
+    color: #020c1800;
+  }
+
+  .textdroit h2,
+  .textgauche h2 {
+    font-size: 30px;
+    color: #020c18;
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .textdroit h3,
+  .textgauche h3 {
+    font-size: 35px;
+    color: #020c18;
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  .textdroit p,
+  .textgauche p {
+    font-size: 22px;
+    color: #020c18;
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  #retour {
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #020c1801;
+  }
+
+  .footer {
+    border-top: 3px solid #ab911d;
+  }
+
+  .footer h2 {
+    font-size: 15px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav button {
+    display: none;
+  }
+
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+  #retour {
+    z-index: 2
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .logo a img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 20px;
+  }
+}

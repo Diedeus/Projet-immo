@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Immo Créa'Luxe </title>
+    <link rel="shortcut icon" type="image/png" href="../assets/img/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/styleaccueil.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+
+
+    <!-- Nav -->
+    <nav class="entete">
+        <div class="logo">
+            <a href="accueil.html"><img src="../img/logo.webp" alt="logo"></a>
+        </div>
+        <div class="titre_entete">
+            <h1>Agence Immo Créa'Luxe</h1>
+            <h2>Accueil</h2>
+        </div>
+    </nav>
+    <!-- bouton retour flottant -->
+    <button id="retour"><img src="../img/to_top.png" alt="retour haut de page"></button>
+
+    <!-- espace recherche -->
+    <div class="recherche">
+        <div class="video-container">
+            <video id="video-recherche" autoplay muted loop>
+
+                <source src="../img/maison-de-luxe-video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+        <select class="menu-deroulant" onchange="window.location.href = this.value;">
+            <option class="menu-deroulant">Sélectionner le secteur désiré </option>
+            <option class="menu-deroulant" value="./Lille.html">Secteur de Lille</option>
+            <option class="menu-deroulant" value="./Arras.html">Secteur d'Arras</option>
+            <option class="menu-deroulant" value="./Page Le touquet.html">Secteur du Touquet</option>
+        </select>
+    </div>
+
+    <!--espace agent-->
+
+    <div class="agent">
+        <div class="flip-card" id="flip">
+            <div class="flip-card-inner" id="flip1">
+                <div class="flip-card-front">
+                    <img src="../img/fou1.jpg" alt="agent Lille">
+                    <h3 class="flip-card__title">Votre agent à Lille</h3>
+
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="backcard__title">Francis H </h3> <br><br>
+                    <p class="backcard__text"> 02 rue de la Roue <br> 59000 Lille <br> 00 65 87 99 86 </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" id="flip2">
+            <div class="flip-card-inner" id="flip3">
+                <div class="flip-card-front">
+                    <img src="../img/folle2.webp" alt="agent Lille">
+                    <h3 class="flip-card__title">Votre agent au Touquet</h3>
+
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="backcard__title">Psycho Patricia </h3> <br><br>
+                    <p class="backcard__text"> 10 Bd du fouet <br> 62520 Touquet <br> 00 65 87 99 85 </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card" id="flip4">
+            <div class="flip-card-inner" id="flip5">
+                <div class="flip-card-front">
+                    <img src="../img/folle3.png" alt="agent Lille">
+                    <h3 class="flip-card__title">Votre agent à Arras</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="backcard__title">Hugette Nightmare </h3> <br><br>
+                    <p class="backcard__text"> 20 place du suplice <br> 62000 Arras <br> 00 65 87 99 84 </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="parallax-effect">
+        <div class="devise">
+            <div class="back_devise">
+                <h4 class="title__devise">Votre projet nous tiens à coeur</h4>
+                <p class="text__devise">
+                    Toujours à votre écoute pour, <br>
+                    des projets immobiliers d’ambition,<br>
+                    des rêves créatifs,
+                    des envies de luxe. <br>
+                    De Lille au Touquet en passant par Arras.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main__presentation">
+        <h5 class="title__presentation">Pourquoi passer par l’agence immobilière Immo’ Créa Luxe? </h5>
+        <p class="text__presentation">
+            Vous avez des difficultés à trouver votre bien de rêve dans la région ? N’hésitez pas à passer par l’agence
+            immobilière Immo’ Créa Luxe. </p>
+
+        <p class="text__presentation">
+            Spécialisée dans les transactions immobilières, elle s’engage à trouver des biens d’exceptions et de
+            caractère dans les environs de Lille, Arras et Le Touquet, ou dans le secteur de votre choix.</p>
+
+        <p class="text__presentation">
+            L’équipe deImmo’ Créa Luxe vous accompagnera dans la réalisation de votre projet. Des conseillers répartis
+            dans les trois agences de la région, se tiennent à votre disposition pour répondre à toutes vos questions et
+            vous guider dans chaque étape de la procédure d’acquisition</p>
+
+        <p class="text__presentation">
+            Dans le cas où vous souhaiteriez vendre votre bien, Immo’ Créa Luxe se charge de créer une annonce et de
+            trouver de potentiels acquéreurs dans les meilleurs délais.</p>
+
+        <p class="text__presentation">
+            Trouver l’appartement ou la maison de vos rêves peut prendre du temps, car il doit correspondre à votre goût
+            ainsi qu’à votre budget.</p>
+
+    </div>
+
+    <script src="../js/jsflip.js"></script>
+
+    <footer>
+        <div class="footer">
+            <div class="informations"><a href="../html/mentions.html">
+                    <h2>informations légales</h2>
+                    <p>Honoraires <br>
+                        Données personnelles <br>
+                        Utiliasation des cookies <br>
+                        Mentions légales</p>
+            </div>
+            <div class="contact_footer">
+                <h2>contactez-nous</h2>
+                <p>Agence Immo’ Créa Luxe <br>
+                    2 rue d’Auguste 62000 Arras <br>
+                    Immo-crealuxe@contact.fr <br>
+                    +33 00 65 87 99 01</p>
+            </div>
+
+
+        </div>
+    </footer>
+</body>

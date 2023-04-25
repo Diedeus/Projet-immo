@@ -1,0 +1,669 @@
+@font-face {
+  /*permet de donner un numéro a une police dans le fichier asset */
+  font-family: "font-1";
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-family: "font-2";
+  src: url(../fonts/EmilyAustin.ttf);
+}
+
+* {
+  font-family: "font-1";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4e4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.entete {
+  background: linear-gradient(45deg, #020c18, #020c18, #7b8fa8, #020c18);
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border-bottom: 7px solid #ab911d;
+  position: fixed;
+  z-index: 3;
+}
+
+.logo a img {
+  width: 100%;
+  height: 143px;
+}
+
+.titre_entete {
+  background: -webkit-linear-gradient(top, #2a86dc, #fcfdfd);
+  /* Dégradé linéaire de gauche à droite */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Applique le dégradé de couleurs au texte */
+  margin: auto
+}
+
+.titre_entete h1 {
+  font-size: 4em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 3px solid #ab911d;
+}
+
+.titre_entete h2 {
+  font-size: 2em;
+  margin: auto;
+}
+
+#retour {
+  background-color: #020c1800;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.recherche {
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.video-container {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+#video-recherche {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.menu-deroulant {
+  width: 25%;
+  height: 5%;
+  border-radius: 15px;
+  background-color: #c5a41290;
+  font-size: 1.2rem;
+}
+
+.agent {
+  background-color: #fcfdfd;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 5px solid #ab911d;
+  border-top: 5px solid #ab911d;
+}
+
+.agent img {
+  width: 300px;
+  height: 100%;
+}
+
+/* Le conteneur de la carte flip - définissez la largeur et la hauteur comme vous le souhaitez. Nous avons ajouté la propriété border pour démontrer que le flip lui-même sort de la boîte au survol (supprimez la perspective si vous ne voulez pas l'effet 3D */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 241px;
+  perspective: 1000px;
+  /* Supprimez cette option si vous ne voulez pas de l'effet 3D. */
+}
+
+/* Ce conteneur est nécessaire pour positionner les côtés avant et arrière. */
+.flip-card-inner {
+  position: relative;
+  margin: auto;
+  padding: auto;
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Positionner les côtés avant et arrière */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  margin: auto;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card img {
+  border-radius: 10px;
+}
+
+.flip-card__title {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(247, 245, 242);
+  font-size: 1.5rem;
+  font-family: 'font-1', sans-serif;
+}
+
+/* Styliser le recto (solution de repli si l'image est manquante) */
+.flip-card-front {
+  background-color: #f4f4e4;
+  color: black;
+  border-radius: 20px;
+}
+
+/* Style de la face arrière */
+.flip-card-back {
+  background-color: #041a3550;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+}
+
+.backcard__title {
+  margin-top: 30px;
+  font-family: 'font1', sans-serif;
+  font-size: 1.5rem;
+}
+
+.backcard__text {
+  font-family: 'font1', sans-serif;
+  font-size: 1.5rem;
+}
+
+.parallax {
+  display: flex;
+  flex-direction: column;
+}
+
+.parallax-effect {
+  background-image: url(../img/villaluxe.jpg);
+  height: 100%;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.devise {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 10%;
+  text-align: center;
+
+}
+
+.back_devise {
+  background-color: #f4f4e450;
+  border-radius: 15px;
+}
+
+.title__devise {
+  font-family: 'font-2', sans-serif;
+  font-size: 3.5rem;
+  color: #AB911C;
+  font-weight: 500;
+  text-align: center;
+}
+
+.text__devise {
+  font-family: 'font-1', sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 5px 50px;
+}
+
+.main__presentation {
+  margin-top: -30px;
+  padding: auto;
+  width: 100%;
+  height: 300px;
+  background-color: #fcfdfd;
+}
+
+.title__presentation {
+  padding-top: 20px;
+  margin: 30px auto;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.text__presentation {
+  margin: 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+
+}
+
+.footer {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #020c18, #020c18, #7b8fa8, #020c18);
+  border-top: 5px solid #ab911d;
+  margin-top: -3px;
+  /*pour supperposer les bordures du dernier éléments body et footer */
+  color: #ab911d;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.informations p {
+  text-decoration: underline;
+}
+
+#image-container {
+  display: none;
+}
+
+footer a {
+  color: #ab911d;
+}
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 0;
+    background-color: #f4f4e4;
+  }
+
+  nav button {
+    height: 45px;
+    width: 102px;
+    border-radius: 30px;
+    border: #ab911d 2px solid;
+    background-color: #7b8fa8;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  nav button img {
+    width: 100px;
+    height: 80px;
+    margin-top: -21px;
+    margin-left: -8px;
+  }
+
+  .entete {
+    width: 100%;
+    height: 100px;
+    border-bottom: 4px solid #ab911d;
+  }
+
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 45px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+  .recherche {
+    height: 700px;
+  }
+
+  .menu-deroulant {
+    width: 40%;
+    font-size: 1rem;
+  }
+
+
+  .maisondroit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 3px solid #ab911d;
+    align-items: center;
+  }
+
+  .maisongauche {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: 3px solid #ab911d;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .slideshow-container img {
+    width: 100%;
+  }
+
+  .slideshow-slide {
+    display: none;
+  }
+
+  .prev,
+  .next {
+    color: #f4f4e4;
+    position: absolute;
+    top: 45%;
+    margin-top: -22px;
+    width: auto;
+    padding: 0px;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .textphoto {
+    color: #020c1800;
+  }
+
+  .numerophoto {
+    color: #020c1800;
+  }
+
+  .textdroit h2,
+  .textgauche h2 {
+    font-size: 30px;
+    color: #020c18;
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .textdroit h3,
+  .textgauche h3 {
+    font-size: 35px;
+    color: #020c18;
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  .textdroit p,
+  .textgauche p {
+    font-size: 22px;
+    color: #020c18;
+    text-align: center;
+    margin-top: -5px;
+  }
+
+  #retour {
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #020c1801;
+  }
+
+  .footer {
+    border-top: 3px solid #ab911d;
+  }
+
+  .footer h2 {
+    font-size: 15px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav button {
+    display: none;
+  }
+
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 20px;
+  }
+
+  .recherche {
+    height: 650px;
+  }
+
+
+  .agent {
+    flex-direction: column;
+    height: 800px;
+    z-index: 1;
+  }
+
+  .flip-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .flip-card-inner {
+    width: 100px;
+    height: 150px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    width: 200px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+  .recherche {
+    height: 650px;
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  .logo a img {
+    width: 100px;
+    height: 90px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 25px;
+  }
+
+  .recherche {
+    height: 650px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .logo a img {
+    width: 80px;
+    height: 96px;
+  }
+
+  .titre_entete h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ab911d;
+    text-align: center;
+  }
+
+  .titre_entete h2 {
+    font-size: 20px;
+  }
+
+  .recherche {
+    height: 820px;
+  }
+
+  .menu-deroulant {
+    width: 75%;
+    font-size: 1rem;
+  }
+
+  .agent {
+    width: 100%;
+    height: 600px;
+  }
+
+  .agent img {
+    width: 200px;
+    height: 180px;
+
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    margin-top: 10px;
+    width: 200px;
+    height: 180px;
+    margin-left: -16%;
+  }
+
+  .flip-card-inner {
+    width: 150px;
+  }
+
+  .flip-card {
+    width: 200px;
+    perspective: 180px;
+    /* Supprimez cette option si vous ne voulez pas de l'effet 3D. */
+  }
+
+  .backcard__title {
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+
+  .backcard__text {
+    margin-top: -30px;
+    font-size: 1.2rem;
+  }
+
+  .flip-card__title {
+    top: 110px;
+    font-size: 1.1rem;
+  }
+
+  .title__devise {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .text__devise {
+    font-size: 1rem;
+    padding: 10px 50px;
+  }
+
+  .main__presentation {
+    margin-top: -30px;
+    height: 400px;
+  }
+
+  .title__presentation {
+    margin: 30px 20px;
+    font-size: 1.2rem;
+  }
+
+  .text__presentation {
+    margin: 0 40px;
+    font-size: 0.8rem;
+
+  }
+
+  .devise {
+    height: 200px;
+    margin: 0 20px;
+  }
+
+  .back_devise {
+    margin-top: 275px;
+    height: 375px;
+  }
+
+
+
+
+
+
+
+}
